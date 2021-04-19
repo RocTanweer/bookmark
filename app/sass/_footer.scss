@@ -1,0 +1,92 @@
+.footer {
+    width: 100%;
+    padding: 0 rem(31) 0 rem(33);
+    background-color: $veryDarkBlue1;
+    color: #ffffff;
+
+    &__wrapper {
+        max-width: rem(1105);
+        height: rem(88);
+        margin: 0 auto;
+        justify-content: space-between;
+
+        @include responsive(large){
+            flex-direction: column;
+            height: auto;
+            padding: rem(39) 0 rem(42) 0;
+        }
+ 
+        a {
+            color: #ffffff;
+            transition: color 300ms ease-in-out;
+
+            &:hover {
+                color: $softRed;
+            }
+
+            &:focus {
+                outline: 2px dashed $softRed;
+            }
+        }
+
+        &__nav {
+            &__links {
+                flex-direction: row;
+
+                @include responsive(large) {
+                    flex-direction: column;
+                    margin-bottom: rem(13);
+                }
+
+                li{
+                    &:first-child{
+                        margin-right: rem(33);
+
+                        @include responsive(large) {
+                            margin-right: 0;
+                            margin-bottom: rem(42);
+                        }
+
+                        .footer__wrapper__nav__logo {
+                            width: 100%;
+                            padding-top: 3px;
+                        }
+                    }
+
+                    &:not(:first-child), &:not(:last-child) {
+                        margin-right: rem(46);
+
+                        @include responsive(large) {
+                            margin-right: 0;
+                            margin-bottom: rem(32);
+                        }
+                    }
+
+                    a {
+                        font-size: rem(13);
+                        letter-spacing: 1.5px;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+        }
+
+        &__social {
+            &__links {
+                font-size: rem(26);
+                &:first-child {
+                    margin-right: rem(40);
+                    padding-left: 6px;
+
+                    @include responsive(large) {
+                        margin-right: rem(38);
+                    }
+                }
+
+                @include responsive(large) {
+                    font-size: rem(27);
+                }
+            }
+        }
+    }
+}

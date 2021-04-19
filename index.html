@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="./dist/all.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./dist/style.css">
+    <!-- Icon -->
+    <link rel="shortcut icon" href="./images/favicon-32x32.png" type="image/x-icon">
+    <title>Bookmark landing page</title>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header flex">
+        <div class="header__logo">
+            <a href="#">
+                <img src="./images/logo-bookmark.svg" alt="mainLogo">
+            </a>
+        </div>
+
+        <nav class="header__nav">
+            <ul class="header__nav__links flex">
+                <li><a class="header__nav__links__link" href="#feature">features</a></li>
+                <li><a class="header__nav__links__link" href="#download">pricing</a></li>
+                <li><a class="header__nav__links__link" href="#contact">contact</a></li>
+                <li><button class="header__nav__links__button btn" type="button" name="login">login</button></li>
+            </ul>
+        </nav>
+
+        <div class="header__ham flex addRemoveMobMenu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="header__overlayMenu">
+            <div class="header__overlayMenu__logo flex">
+                <a href="#">
+                    <img src="./images/logo-bookmark-mob.svg" alt="mainMobLogo">
+                </a>
+            </div>
+
+            <ul class="header__overlayMenu__links flex">
+                <li><a class="header__overlayMenu__links__link addRemoveMobMenu" href="#feature">features</a></li>
+                <li><a class="header__overlayMenu__links__link addRemoveMobMenu" href="#download">pricing</a></li>
+                <li><a class="header__overlayMenu__links__link addRemoveMobMenu" href="#contact">contact</a></li>
+                <li><button class="header__overlayMenu__links__button btn" type="button" name="login">login</button>
+                </li>
+            </ul>
+
+            <div class="header__overlayMenu__social">
+                <a href="https://www.facebook.com/roc.tanweer.5/" target="_blank" class="header__overlayMenu__social__link">
+                    <i class="fab fa-facebook-square"></i>
+                </a>
+                <a href="https://twitter.com/RocTanweer" target="_blank" class="header__overlayMenu__social__link">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="header__overlay"></div>
+    </header>
+
+    <section class="hero">
+        <div class="hero__wrapper flex">
+            <div class="hero__wrapper__text">
+                <h1>
+                    A Simple Bookmark Manager
+                </h1>
+
+                <p>
+                    A clean and simple interface to organize your favourite websites. Open a new
+                    browser tab and see your sites load instantly. Try it for free.
+                </p>
+
+                <div class="hero__wrapper__text__cta flex">
+                    <button class="btn btn-chrome">
+                        Get it on Chrome
+                    </button>
+
+                    <button class="btn btn-firefox">
+                        Get it on Firefox
+                    </button>
+                </div>
+            </div>
+
+            <div class="hero__wrapper__image">
+                <img src="./images/illustration-hero.svg" alt="hero-image">
+            </div>
+        </div>
+    </section>
+
+    <section id="feature" class="features flex">
+        <div class="features__wrapper flex">
+            <div class="features__wrapper__intro">
+                <h2>
+                    Features
+                </h2>
+                <p>
+                    Our aim is to make it quick and easy for you to access your favourite websites.
+                    Your bookmarks sync between your devices so you can access them on the go.
+                </p>
+            </div>
+
+            <div class="features__wrapper__changer flex">
+                <button id="simple" class="button active" data-tab=1>
+                    Simple Bookmarking
+                </button>
+
+                <button id="speedy" class="button" data-tab=2>
+                    Speedy Searching
+                </button>
+
+                <button id="easy" class="button" data-tab=3>
+                    Easy Sharing
+                </button>
+            </div>
+
+            <div class="features__wrapper__content flex">
+                <div class="features__wrapper__content__image">
+                    <img src="./images/illustration-features-tab-1.svg" alt="tab-1-image">
+                </div>
+
+                <div class="features__wrapper__content__description">
+                    <h2>
+                        Bookmark in one click
+                    </h2>
+
+                    <p>
+                        Organize your bookmarks however you like. Our simple drag-and-drop interface
+                        gives you complete control over how you manage your favourite sites.
+                    </p>
+
+                    <div class="cta">
+                        <button class="btn btn-info">
+                            More Info
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id ="download" class="download">
+        <div class="download__wrapper flex">
+            <div class="download__wrapper__intro">
+                <h2>
+                    Download the extension
+                </h2>
+
+                <p>
+                    We’ve got more browsers in the pipeline. Please do let us know if you’ve
+                    got a favourite you’d like us to prioritize.
+                </p>
+            </div>
+
+            <div class="download__wrapper__content flex">
+                <div class="download-box" id="chrome">
+                    <div class="icon-wrapper">
+                        <img src="./images/logo-chrome.svg" alt="chrome-icon">
+                    </div>
+
+                    <h3>
+                        Add to Chrome
+                    </h3>
+
+                    <p>
+                        Minimum version 62
+                    </p>
+
+                    <button class="btn">
+                        Add & Install Extension
+                    </button>
+                </div>
+
+                <div class="download-box" id="fox">
+                    <div class="icon-wrapper">
+                        <img src="./images/logo-firefox.svg" alt="fox-icon">
+                    </div>
+
+                    <h3>
+                        Add to Firefox
+                    </h3>
+
+                    <p>
+                        Minimum version 55
+                    </p>
+
+                    <button class="btn">
+                        Add & Install Extension
+                    </button>
+                </div>
+
+                <div class="download-box" id="opera">
+                    <div class="icon-wrapper">
+                        <img src="./images/logo-opera.svg" alt="opera-icon">
+                    </div>
+
+                    <h3>
+                        Add to Opera
+                    </h3>
+
+                    <p>
+                        Minimum version 46
+                    </p>
+
+                    <button class="btn">
+                        Add & Install Extension
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq">
+        <div class="faq__wrapper flex">
+            <div class="faq__wrapper__intro">
+                <h2>
+                    Frequently Asked Questions
+                </h2>
+                <p>
+                    Here are some of our FAQs. If you have any other questions you’d like
+                    answered please feel free to email us.
+                </p>
+            </div>
+
+            <div class="faq__wrapper__content">
+                <div class="faq-item">
+                    <button class="faq-button flex" aria-expanded="false">
+                        <span class="question">
+                            What is Bookmark?
+                        </span>
+
+                        <span class="icon-wrapper" aria-hidden="true">
+                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="18" height="12">
+                                <path d="M1 1l8 8 8-8" />
+                            </svg>
+                        </span>
+                    </button>
+
+                    <div class="faq-content">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt
+                            justo eget ultricies fringilla. Phasellus blandit ipsum quis quam ornare mattis.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-button flex" aria-expanded="false">
+                        <span class="question">
+                            How can I request a new browser?
+                        </span>
+                
+                        <span class="icon-wrapper" aria-hidden="true">
+                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="18" height="12">
+                                <path d="M1 1l8 8 8-8" />
+                            </svg>
+                        </span>
+                    </button>
+
+                    <div class="faq-content">
+                        <p>
+                            Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula.
+                            Suspendisse imperdiet. Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa,
+                            ultricies non ligula. Suspendisse imperdie tVivamus luctus eros aliquet convallis ultricies.
+                            Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-button flex" aria-expanded="false">
+                        <span class="question">
+                            Is there a mobile app?
+                        </span>
+                
+                        <span class="icon-wrapper" aria-hidden="true">
+                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="18" height="12">
+                                <path d="M1 1l8 8 8-8" />
+                            </svg>
+                        </span>
+                    </button>
+
+                    <div class="faq-content">
+                        <p>
+                            Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulum dolor, ut condimentum
+                            urna vulputate eget. Cras in ligula quis est pharetra mattis sit amet pharetra purus. Sed
+                            sollicitudin ex et ultricies bibendum.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-button flex" aria-expanded="false">
+                        <span class="question">
+                            What about other Chromium browsers?
+                        </span>
+                
+                        <span class="icon-wrapper" aria-hidden="true">
+                            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="18" height="12">
+                                <path d="M1 1l8 8 8-8" />
+                            </svg>
+                        </span>
+                    </button>
+
+                    <div class="faq-content">
+                        <p>
+                            Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at euismod dui. Aliquam
+                            vitae neque eget nisl gravida pellentesque non ut velit.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <button class="btn faq-btn-info btn-info">
+                More Info
+            </button>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="contact__wrapper">
+            <p class="contact__wrapper__info">
+                35,000+ already joined
+            </p>
+
+            <h2 class="contact__wrapper__heading">
+                Stay up-to-date with what we’re doing
+            </h2>
+
+            <form action="#" class="contact__wrapper__form flex">
+                <div class="input-container">
+                    <input type="text" name="email" id="email" aria-label="email" placeholder="Enter your email address" autocomplete="off">
+                    <p>
+                        whoops, make sure it's an email
+                    </p>
+                </div>
+
+                <input type="submit" value="Contact Us" name="submit" id="submit" aria-label="submit">
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer__wrapper flex">
+            <div class="footer__wrapper__nav flex">
+                <ul class="footer__wrapper__nav__links flex">
+                    <li>
+                        <a href="#"><img class="footer__wrapper__nav__logo" src="./images/logo-bookmark-footer.svg" alt="mainLogoFooter"></a>
+                    </li>
+                    <li>
+                        <a href="#feature">features</a>
+                    </li>
+                    <li>
+                        <a href="#download">pricing</a>
+                    </li>
+                    <li>
+                        <a href="#contact">contact</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer__wrapper__social">
+                <a href="https://www.facebook.com/roc.tanweer.5/" target="_blank" class="footer__wrapper__social__links">
+                    <i class="fab fa-facebook-square"></i>
+                </a>
+                <a href="https://twitter.com/RocTanweer" target="_blank" class="footer__wrapper__social__links">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <div class="attribution flex">
+        <div class="para__wrapper">
+            <p>
+                Challenge by <a href="https://www.frontendmentor.io?ref=challenge" tabindex="-1" id="fem" target="_blank">frontend mentor</a>.
+                Coded by <a href="https://github.com/RocTanweer" tabindex="-1" id="rt" target="_blank">roc tanweer</a>
+            </p>
+        </div>
+        <div class="img-wrapper">
+            <img id="attr" src="./images/attribution.png" alt="attributionImage">
+        </div>
+    </div>
+    <!-- Custom Script -->
+    <script src="./app/js/script.js"></script>
+</body>
+
+</html>

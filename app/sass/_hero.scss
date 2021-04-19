@@ -1,0 +1,155 @@
+.hero {
+    padding: 0 rem(31) 0 rem(33);
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+    margin-bottom: rem(95);
+
+    @include responsive(small) {
+        margin-bottom: rem(157);
+    }
+
+    &::after {
+        content: '';
+        width: 35%;
+        height: rem(352); 
+        position: absolute;
+        bottom : 0;
+        right:0;
+        background-color: $softBlue;
+        border-radius: 50rem 0 0 50rem;
+        z-index: -1;
+
+        @include responsive(large) {
+            width: 75%;
+            bottom: rem(320);
+            height: calc(208px + (352 - 208) * ((100vw - 375px) / (807 - 375)));
+        }
+
+        @include responsive(small) {
+            bottom: 23rem;
+            width: 80%;
+        }
+
+        @include responsive(xsmall) {
+            bottom: 27rem;
+        }
+    }
+
+    &__wrapper {
+        max-width: rem(1105);
+        margin: 0 auto;
+        justify-content: space-between;
+
+        @include responsive(large) {
+            flex-flow: column-reverse;
+        }
+
+        &__text {
+            flex: 1 0 rem(478);
+            margin-bottom: rem(22);
+            margin-right: rem(78);
+
+            @include responsive(large) {
+                text-align: center;
+                margin-right : 0;
+                flex: 0 1 auto;
+                margin-bottom: 0;
+            }
+
+            h1 {
+                margin-bottom: rem(31);
+                transform: scale(0.8);
+                opacity: 0;
+                animation: popFade 500ms ease-in-out 600ms forwards;
+            }
+
+            p{
+                margin-bottom: rem(37);
+                transform: translateY(-50%);
+                opacity: 0;
+                animation: fadeUp 500ms ease-in-out 1200ms forwards;
+            }
+
+            &__cta {
+                justify-content: flex-start;
+                opacity: 0;
+                transform: translateX(50%);
+                animation: fadeUp 500ms ease-in-out 1800ms forwards;
+
+                @include responsive(large) {
+                    justify-content: center;
+                }
+
+                @include responsive(xsmall) {
+                    flex-direction: column;
+                }
+
+                .btn-chrome {
+                    background-color: $softBlue;
+                    text-transform: none;
+                    letter-spacing: 0;
+                    padding: rem(16) rem(24);
+                    margin-right: rem(16);
+                    border: 2px solid $softBlue;
+                    
+                    &:hover{
+                        background-color: transparent;
+                        color: $softBlue;
+                    }
+
+                    &:focus{
+                        background-color: transparent;
+                        color: $softBlue;
+                    }
+
+                    @include responsive(small) {
+                        padding: rem(16) rem(17);
+                    }
+
+                    @include responsive(xsmall) {
+                        margin-right: 0;
+                        margin-bottom: rem(13);
+                    }
+                }
+
+                .btn-firefox {
+                    @extend .btn-chrome;
+                    background-color: transparent;
+                    border-color: white;
+                    color: $grayishBlue;
+
+                    &:hover{
+                        border-color: $veryDarkBlue1;
+                    }
+
+                    &:focus{
+                        border-color: $veryDarkBlue1;
+                    }
+                }
+            }
+        }
+
+        &__image {
+            flex: 1 1 auto;
+            transform: translateX(100%) scale(0);
+            transform-origin: left;
+            opacity: 0;
+            animation: moveLeft 500ms ease 0ms forwards;
+
+            @include responsive(large) {
+                text-align: center;
+                width: calc(345px + (657 - 345) * ((100vw - 375px) / (657 - 375)));
+                flex: 0 1 auto;
+                margin-bottom: rem(105);
+            }
+
+            img{
+                @include responsive(large) {
+                    max-width: rem(657);
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

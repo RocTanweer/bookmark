@@ -1,0 +1,205 @@
+.features {
+    width: 100%;
+    padding: 0 rem(31) 0 rem(33);
+    position:  relative;
+    margin-bottom: rem(252);
+
+    @include responsive(small) {
+        margin-bottom: rem(162);
+    }
+
+    &::after {
+            content: '';
+            width: 45%;
+            height: 22rem;
+            position: absolute;
+            bottom: -89px;
+            left: 0;
+            background-color: #5368df;
+            border-radius: 0 50rem 50rem 0;
+            z-index: -1;
+
+            @include responsive(large) {
+                width: 75%;
+                bottom: rem(239);
+                height: calc(208px + (352 - 208) * ((100vw - 375px) / (807 - 375)));
+            }
+
+            @include responsive(small) {
+                width: 80%;
+            }
+        }
+
+    &__wrapper {
+        max-width: rem(1105);
+        margin: 0 auto;
+        flex-direction: column;
+        
+
+        &__intro {
+            max-width: rem(490);
+            text-align: center;
+            margin-bottom: rem(78);
+        }
+
+        &__changer {
+            max-width: rem(731);
+            margin-bottom: rem(73);
+
+            @include responsive(large) {
+                flex-direction: column;
+            }
+
+            .button {
+                position: relative;
+                font-size: rem(16);
+                padding-top: rem(31);
+                padding-bottom: rem(31);
+                cursor: pointer;
+                outline: none;
+                border: none;
+                border-bottom: 1px solid $grayishBlue;
+                color : $grayishBlue;
+                transition: color 300ms ease-in-out;
+                background-color: transparent;
+                
+                @include responsive(small) {
+                    width: 100%;
+                }
+
+                &::after {
+                    content: '';
+                    width: 100%;   
+                    height: 4px;
+                    position: absolute;
+                    left: 0%;
+                    right: 0%;
+                    bottom: 0%;
+                    background-color: #ffffff;
+                }
+
+                &:hover{
+                    color: $softRed;
+                }
+
+                &:focus{
+                    outline: 2px dashed $softRed;
+                }
+
+                &.active {
+                    color: $veryDarkBlue1;
+                    &::after {
+                        background-color: $softRed;
+                    }
+                }
+            }
+
+            #simple {
+                padding-left: rem(42);
+                padding-right: rem(42);
+
+                @include responsive(large) {
+                    border-top: 1px solid $grayishBlue;
+                }
+
+                @include responsive(small) {
+                    padding: rem(22) rem(75)
+                }
+
+                @include responsive(xsmall) {
+                    padding: rem(22) rem(43)
+                }
+            }
+
+            #speedy {
+                padding-left: rem(61);
+                padding-right: rem(61);
+
+                @include responsive(small) {
+                    padding: rem(22) rem(75)
+                }
+
+                @include responsive(xsmall) {
+                    padding: rem(22) rem(43)
+                }
+            }
+
+            #easy {
+                padding-left: rem(73);
+                padding-right: rem(73);
+
+                @include responsive(small) {
+                    padding: rem(22) rem(75)
+                }
+
+                @include responsive(xsmall) {
+                    padding: rem(22) rem(43)
+                }
+            }
+        }
+
+
+        &__content{
+
+            @include responsive(large) {
+                flex-direction: column;
+            }
+
+            &__image {
+                margin-right: rem(125);
+                transform: translateX(-100%);
+                opacity: 0;
+                animation: moveRight 500ms ease-in-out 0ms forwards;
+
+                @include responsive(large) {
+                    margin-right: 0;
+                    margin-bottom: rem(85);
+                    max-width: rem(536);
+                }
+
+                img{
+                    @include responsive(large) {
+                        width: 100%;
+                    }
+                }
+            }   
+
+            &__description {
+                max-width: rem(397);
+
+                @include responsive(large) {
+                    text-align: center;
+                }
+
+                h2 {
+                    opacity: 0;
+                    transform: scale(0);
+                    opacity: 0;
+                    animation: popFade 500ms ease-in-out 600ms forwards;
+                }
+
+                p {
+                    margin-bottom: rem(37);
+                    opacity: 0;
+                    transform: translateX(50%);
+                    animation: fadeUp 500ms ease-in-out 1200ms forwards;
+                }
+
+                .cta{
+                    text-align: left;
+                    opacity: 0;
+                    transform: translateY(50%);
+                    animation: fadeUp 500ms ease-in-out 1800ms forwards;
+
+                    @include responsive(large) {
+                        display: inline-block;
+                    }
+
+                    .btn-info{
+                        @extend .more-info;
+                    }
+                }
+            }
+        }
+    }
+}

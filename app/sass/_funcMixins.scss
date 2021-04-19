@@ -1,0 +1,19 @@
+// convert pixel to rem
+@function rem($px) {
+    @return ($px / 16) * 1rem;
+}
+
+// for responsiveness
+$breakPoints : (
+    'xsmall' : rem(320),
+    'small' : rem(375),
+    'large' : rem(807), 
+    'tab' : rem(1024)
+);
+
+@mixin responsive($size) {
+    $breakPoint : map-get($breakPoints, $size);
+    @media screen and (max-width : $breakPoint) {
+        @content    
+    }
+}
